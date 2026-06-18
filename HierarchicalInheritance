@@ -1,0 +1,40 @@
+package Array;
+import java.util.*;
+class Person
+{
+	String name;
+	int age;
+	void display(String name,int age)
+	{
+		System.out.println("Name:"+name);
+		System.out.println("age:"+age);
+	}
+}
+class Doctor extends Person
+{
+	void treatpatient()
+	{
+		System.out.println("treating");
+	}
+}
+class Nurse extends Person
+{
+	void assistDoctor()
+	{
+		System.out.println("Assisting doctor");
+	}
+}
+
+
+public class HierarchicalInheritance {
+public static void main(String[]args)
+{
+	Doctor d=new Doctor();
+	d.display("Priya", 21);
+	d.treatpatient();
+	Nurse n=new Nurse();
+	n.display("Deepa", 21);
+	n.assistDoctor();
+	
+}
+}
