@@ -1,0 +1,36 @@
+package Oops;
+import java.util.*;
+class Account
+{
+	double balance=1000;
+	void showbalance()
+	{
+		System.out.println("current Balnce:"+balance);
+	}
+}
+class SavingsAccount extends Account
+{
+	void deposit(double amount)
+	{
+		balance+=amount;
+		System.out.println("Updated Balance:"+balance);
+	}
+}
+class PremiumSavings extends SavingsAccount
+{
+	void showBenefits()
+	{
+		System.out.println("premium customer benefits balance");
+	}
+}
+public class Multilevel {
+public static void main(String[]args)
+{
+	Scanner sc=new Scanner(System.in);
+	double amount=sc.nextInt();
+	PremiumSavings p=new PremiumSavings();
+	p.showbalance();
+	p.deposit(amount);
+	p.showBenefits();
+}
+}
