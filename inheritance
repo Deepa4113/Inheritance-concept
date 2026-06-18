@@ -1,0 +1,30 @@
+package Oops;
+import java.util.*;
+class vehicle
+{
+	void start()
+	{
+		System.out.println("vehicle started");
+	}
+	void stop()
+	{
+		System.out.println("vehicle stopped");
+	}
+}
+	class car extends vehicle
+	{
+		void drive()
+		{
+			System.out.println("car Driving");
+		}
+	}
+
+public class SampleInheritance {
+public static void main(String[]args)
+{
+	car c=new car();
+	c.start();
+	c.drive();
+	c.stop();
+}
+}
