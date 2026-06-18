@@ -1,0 +1,41 @@
+package Array;
+class User
+{
+	void login()
+	{
+		System.out.println("logib successful");
+	}
+}
+class Customer extends User
+{
+	void addTocart()
+	{
+		System.out.println("Item Added to cart");
+	}
+}
+class Admin extends User
+{
+	void manageProducts()
+	{
+		System.out.println("Managing products");
+	}
+}
+class PremiumCustomer extends Customer
+{
+	void freeDelivery()
+	{
+		System.out.println("free delivery available");
+	}
+}
+public class HybridInheritance {
+public static void main(String[]args)
+{
+	 Admin a=new Admin();
+	 a.login();
+	 a.manageProducts();
+	 PremiumCustomer p=new PremiumCustomer();
+	 p.login();
+	 p.addTocart();
+	 p.freeDelivery();
+}
+}
